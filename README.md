@@ -1,4 +1,4 @@
-# Validator
+# PHP Validator
 Simple form validation PHP class for POST requests, useful when coding without a framework.
 It uses associative arrays to assign $_POST keys to shorthands, which are provided as arguments to the class constructor.
 
