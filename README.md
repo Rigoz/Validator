@@ -11,6 +11,16 @@ It uses associative arrays to assign $_POST keys to shorthands, which are provid
 7. [Demo](#demo)
 8. [Requirements](#requirements)
 
+# Featured Constraints
+It supports the following constraints:
+- required: checks if the field is not empty
+- unique: checks if the field value is not taken through a callback function provided by yourself
+- char: checks if the field does not contain digits (0-9)
+- integer: checks if the field is an integer number
+- float: checks if the field is a decimal number
+- email: checks if the field is a valid email address
+
+
 #Usage
 Validator uses a shorthand-to-field association to handle input fields, in which array keys are the shorthands, and array values are either field names, constraints or other type of data.
 
@@ -61,16 +71,6 @@ if ($validator->hasData())
 		echo 'Data is invalid';
 }
 ```
-
-
-# Featured Constraints
-It supports the following constraints:
-- required: checks if the field is not empty
-- unique: checks if the field value is not taken through a callback function provided by yourself
-- char: checks if the field does not contain digits (0-9)
-- integer: checks if the field is an integer number
-- float: checks if the field is a decimal number
-- email: checks if the field is a valid email address
 
 # Callback for unique constraint
 This feature is intended for database checks and calls an user-provided function which should check for uniqueness of the value in the database.
