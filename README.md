@@ -26,7 +26,7 @@ Validator uses a shorthand-to-field association to handle input fields, in which
 
 When instantiating Validator class, you need to provide an array of arguments, where these 4 elements must be present with the following keys:
 - 'trigger': which is the field to check if POST data has been submitted, usually the name attribute of the submit button
-- 'id': which is the name attribute of the record id being edited, set it to 0 if you are validating on insert instead
+- 'id': which is the name attribute of the record id being edited, set it to '' (empty string) if you are validating on insert instead
 - 'input': which is an array where keys are field shorthands, and values are field name attributes
 - 'constraints': which is an array where keys are field shorthands (the same as input), and values are constraints separated by a space
 
