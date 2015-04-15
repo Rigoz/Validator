@@ -14,7 +14,7 @@ It uses associative arrays to assign $_POST keys to shorthands, which are provid
 #Usage
 Validator uses a shorthand-to-field association to handle input fields, in which array keys are the shorthands, and array values are either field names, constraints or other type of data.
 
-When instantiating Validator class, you need to provide an array of arguments, where at least these 4 elements must be present with the following keys:
+When instantiating Validator class, you need to provide an array of arguments, where these 4 elements must be present with the following keys:
 - 'trigger': which is the field to check if POST data has been submitted, usually the name attribute of the submit button
 - 'id': which is the id of the record being edited, set it to 0 if you are validating on insert instead
 - 'input': which is an array where keys are field shorthands, and values are field name attributes
