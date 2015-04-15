@@ -17,7 +17,7 @@ and the value to check.
 The user-provided function should return TRUE if $value is not taken by another record, FALSE otherwise.
 
 
-A basic example would be:
+A basic example for a valid callback would be:
 ```
 function isEmailAvailable($id, $value)
 {
