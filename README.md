@@ -14,6 +14,8 @@ It supports the following constraints:
 This feature is intended for database checks and calls an user-provided function which should check for uniqueness of the value in the database.
 To the user-provided function will be passed two arguments, $id and $value, respectively the id of the record we are modifying (0 in case we are adding a new record) 
 and the value to check.
+The user-provided function should return true if $value is not taken by another record, false otherwise.
+
 
 A basic example would be:
 ```
