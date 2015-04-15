@@ -2,7 +2,16 @@
 Simple form validation PHP class for POST requests, useful when coding without a framework.
 It uses associative arrays to assign $_POST keys to shorthands, which are provided as arguments to the class constructor.
 
-# Featured constraints
+1. [Featured Constraints](#featured-constraints)
+2. [Callback for unique constraint](#callback-for-unique-constraint)
+3. [Error Handling](#error-handling)
+4. [Old input](#old-input)
+5. [Extensibility](#extensibility)
+6. [Usage](#usage)
+7. [Demo](#demo)
+8. [Requirements](#requirements)
+
+# Featured Constraints
 It supports the following constraints:
 - required: checks if the field is not empty
 - unique: checks if the field value is not taken through a callback function provided by yourself
