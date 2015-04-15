@@ -54,4 +54,9 @@ $input = $validator->getOldInput();
 echo '<input type="text" name="username" value="' . $input['username'] . '" />';
 ```
 # Extensibility
+This class is written to be extensible on the validation and the error handling.
 
+### Extending validation
+You may extend validation with two methods:
+- preValidation() which is called before the validation takes any action, and should not return any value
+- postValidation() which is called after validation has occured and affects the final result of the validation by returning TRUE or FALSE
