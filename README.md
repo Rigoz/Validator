@@ -16,39 +16,33 @@ Validator uses a shorthand-to-field association to handle input fields, in which
 
 When instantiating Validator class, you need to provide an array of arguments, where these 4 elements must be present with the following keys:
 - 'trigger': which is the field to check if POST data has been submitted, usually the name attribute of the submit button
-- 'id': which is the id of the record being edited, set it to 0 if you are validating on insert instead
+- 'id': which is the name attribute of the record id being edited, set it to 0 if you are validating on insert instead
 - 'input': which is an array where keys are field shorthands, and values are field name attributes
 - 'constraints': which is an array where keys are field shorthands (the same as input), and values are constraints separated by a space
 
 You can also provide 2 more elements to the array of arguments:
 - 'uniqueCallbacks': which is an array of callback functions for unique constraint check, with keys as shorthands and values as arrays of callables
-- defaults': which is an array of default values returned when getOldInput() has no data, where keys are shorthands and values are field values
+- 'defaults': which is an array of default values returned when getOldInput() has no data, where keys are shorthands and values are field values
 
-
+An example of array of arguments should look like this:
 ```
 $args = [
-	'trigger' 		=> 'wpv-update',
-	'id'			=> 'wpv-grid-id',
+	'trigger' 		=> 'submit',
+	'id'			=> 'user-id',
 	'input' 		=> [
-		'name'			=> 'wpv-grid-name',
-		'layout'		=> 'wpv-grid-layout',
-		'count'			=> 'wpv-grid-count',
-		'link'			=> 'wpv-grid-link'
+		'name'			=> 'user-name',
+		'email'		=> 'user-email',
 	],
 	'constraints' 	=> [
-		'name'			=> 'required unique',
-		'layout'		=> 'required char',
-		'count'			=> 'required integer',
-		'link'			=> 'email'
+		'name'			=> 'required char',
+		'email'		=> 'required email unique',
 	],
 	'uniqueCallbacks' => [
-		'name'			=> ['callbackTest', 'checkName']
+		'email'			=> ['myClass', 'isEmailAvailable']
 	],
 	'defaults' => [
-		'name'			=> 'ciao',
-		'layout'		=> 'miao',
-		'count'			=> '4',
-		'link'			=> 'www.google.it'
+		'name'			=> 'John',
+		'email'		=> 'john@domain.com',
 	],
 ];
 ```
