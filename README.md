@@ -50,7 +50,7 @@ Example:
 ```
 // assuming our validator is instantiated as $validator
 $input = $validator->getOldInput();
-echo '<input type="text" name="username" value="' . $input[username] . '" />';
+echo '<input type="text" name="username" value="' . $input['username'] . '" />';
 ```
 # Extensibility
 
