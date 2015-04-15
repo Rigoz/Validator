@@ -17,12 +17,12 @@ and the value to check.
 
 A basic example would be:
 ```
-function isNameAvailable($id, $value)
+function isEmailAvailable($id, $value)
 {
   $connection = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
 	
-	$statement = $connection->prepare('SELECT title FROM articles WHERE title = :name AND id != :id');
-	$statement->bindValue(':name', $value, PDO::PARAM_STR);
+	$statement = $connection->prepare('SELECT email FROM users WHERE email = :email AND id != :id');
+	$statement->bindValue(':email', $value, PDO::PARAM_STR);
 	$statement->bindValue(':id', $id, PDO::PARAM_INT);
 	
 	$statement->execute();
