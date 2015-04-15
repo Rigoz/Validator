@@ -31,18 +31,18 @@ $args = [
 	'id'			=> 'user-id',
 	'input' 		=> [
 		'name'			=> 'user-name',
-		'email'		=> 'user-email',
+		'email'			=> 'user-email',
 	],
 	'constraints' 	=> [
 		'name'			=> 'required char',
-		'email'		=> 'required email unique',
+		'email'			=> 'required email unique',
 	],
 	'uniqueCallbacks' => [
 		'email'			=> ['myClass', 'isEmailAvailable']
 	],
 	'defaults' => [
 		'name'			=> 'John',
-		'email'		=> 'john@domain.com',
+		'email'			=> 'john@domain.com',
 	],
 ];
 ```
