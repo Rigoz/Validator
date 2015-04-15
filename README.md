@@ -60,3 +60,22 @@ This class is written to be extensible on the validation and the error handling.
 You may extend validation with two methods:
 - preValidation() which is called before the validation takes any action, and should not return any value
 - postValidation() which is called after validation has occured and affects the final result of the validation by returning TRUE or FALSE
+
+### Extending error handling
+You may alter the error messages by implementing your own static method getErrorMessage().
+Standard method looks like this:
+```
+public static function getErrorMessage($code)
+{
+	switch($code)
+	{
+		case 'E_MISSING_FIELD'	: return 'This field is missing from data request';
+		case 'E_REQUIRED_FIELD'	: return 'This field is required';
+		case 'E_UNIQUE_FIELD'	: return 'This value is already in use';
+		case 'E_CHAR_FIELD'	: return 'This field cannot contain numbers';
+		case 'E_INTEGER_FIELD'	: return 'This field can only contain integer numbers';
+		case 'E_FLOAT_FIELD'	: return 'This field can only contain decimal numbers';
+		case 'E_EMAIL_FIELD'	: return 'This is not a valid email address';
+	}
+}
+```
