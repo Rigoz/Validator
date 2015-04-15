@@ -112,7 +112,7 @@ Example:
 ```
 // assuming our validator is instantiated as $validator
 $input = $validator->getOldInput();
-echo '<input type="text" name="username" value="' . $input['username'] . '" />';
+echo '<input type="text" name="user-email" value="' . $input['email'] . '" />';
 ```
 # Extensibility
 This class is written to be extensible on the validation and the error handling.
