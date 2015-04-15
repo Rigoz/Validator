@@ -32,3 +32,17 @@ function isEmailAvailable($id, $value)
 	return $statement->fetchAll() == null;
 }
 ```
+# Error handling
+When a field does not pass a constraint check, an error message is saved for later view.
+You can get all error messages by calling the method getErrors(). It returns an associative array with field shorthands as keys and messages as values.
+
+Example:
+```
+// assuming our validator is instantiated as $validator
+$errors = $validator->getErrors();
+echo $errors['email'];
+```
+
+
+# Extensibility
+
