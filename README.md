@@ -29,6 +29,6 @@ function isEmailAvailable($id, $value)
 	
 	$statement->execute();
 	
-	return $statement->fetchAll() != null;
+	return $statement->fetchAll() == null;
 }
 ```
