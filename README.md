@@ -106,7 +106,7 @@ echo $errors['email'];
 ```
 
 # Old input
-When updating an element with a form, you may want to show the user what he typed after validation occurs, especially if some fields dont pass the checks. You can do this by setting the values of input fields to the values returned by the method getOldInput(). If there is no old input to display, which basically means the user never submitted the form, getOldInput() will return custom default values you can specify by passing them through the method setDefaults().
+When updating an element with a form, you may want to show the user what he typed after validation occurs, especially if some fields dont pass the checks. You can do this by setting the values of input fields to the values returned by the method getOldInput(). If there is no old input to display, which basically means the user never submitted the form, getOldInput() will return custom default values specified by the 'defaults' array passed to the constructor.
 
 Example:
 ```
