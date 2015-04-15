@@ -79,3 +79,12 @@ public static function getErrorMessage($code)
 	}
 }
 ```
+This is especially useful for multilanguage support.
+
+# Usage
+
+
+# Demo
+
+# Requirements
+Validator requires PHP 5.3.0 to support 'Late Static Bindings'
