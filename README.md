@@ -12,7 +12,33 @@ It uses associative arrays to assign $_POST keys to shorthands, which are provid
 8. [Requirements](#requirements)
 
 #Usage
-
+```
+$args = [
+	'trigger' 		=> 'wpv-update',
+	'id'			=> 'wpv-grid-id',
+	'input' 		=> [
+		'name'			=> 'wpv-grid-name',
+		'layout'		=> 'wpv-grid-layout',
+		'count'			=> 'wpv-grid-count',
+		'link'			=> 'wpv-grid-link'
+	],
+	'constraints' 	=> [
+		'name'			=> 'required unique',
+		'layout'		=> 'required char',
+		'count'			=> 'required integer',
+		'link'			=> 'email'
+	],
+	'uniqueCallbacks' => [
+		'name'			=> ['callbackTest', 'checkName']
+	],
+	'defaults' => [
+		'name'			=> 'ciao',
+		'layout'		=> 'miao',
+		'count'			=> '4',
+		'link'			=> 'www.google.it'
+	],
+];
+```
 
 # Featured Constraints
 It supports the following constraints:
