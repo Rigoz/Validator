@@ -4,7 +4,7 @@ Simple form validation PHP class for POST request, useful when coding without a 
 # Featured constraints
 It supports the following constraints:
 - required: checks if the field is not empty
-- unique: checks if the field value is not taken through a callback function provided by you
+- unique: checks if the field value is not taken through a callback function provided by yourself
 - char: checks if the field does not contain digits (0-9)
 - integer: checks if the field is an integer number
 - float: checks if the field is a decimal number
