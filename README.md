@@ -19,7 +19,7 @@ A basic example would be:
 ```
 function isEmailAvailable($id, $value)
 {
-  $connection = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
+	$connection = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
 	
 	$statement = $connection->prepare('SELECT email FROM users WHERE email = :email AND id != :id');
 	$statement->bindValue(':email', $value, PDO::PARAM_STR);
