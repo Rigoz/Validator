@@ -3,13 +3,16 @@ Simple form validation PHP class for POST requests, useful when coding without a
 It uses associative arrays to assign $_POST keys to shorthands, which are provided as arguments to the class constructor.
 
 1. [Featured Constraints](#featured-constraints)
-2. [Callback for unique constraint](#callback-for-unique-constraint)
-3. [Error Handling](#error-handling)
-4. [Old input](#old-input)
-5. [Extensibility](#extensibility)
-6. [Usage](#usage)
+2. [Usage](#usage)
+3. [Callback for unique constraint](#callback-for-unique-constraint)
+4. [Error Handling](#error-handling)
+5. [Old input](#old-input)
+6. [Extensibility](#extensibility)
 7. [Demo](#demo)
 8. [Requirements](#requirements)
+
+#Usage
+
 
 # Featured Constraints
 It supports the following constraints:
@@ -89,9 +92,6 @@ public static function getErrorMessage($code)
 }
 ```
 This is especially useful for multilanguage support.
-
-# Usage
-
 
 # Demo
 
