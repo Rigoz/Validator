@@ -46,6 +46,22 @@ $args = [
 	],
 ];
 ```
+To validate data the method validate() must be called, which returns TRUE or FALSE accordingly
+
+Basic example validating data:
+```
+// $args is the one provided above
+$validator = new Validator($args);
+
+if ($validator->hasData())
+{
+	if ($validator->validate())
+		echo 'Data is valid';
+	else
+		echo 'Data is invalid';
+}
+```
+
 
 # Featured Constraints
 It supports the following constraints:
