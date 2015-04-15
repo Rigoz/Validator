@@ -43,6 +43,14 @@ $errors = $validator->getErrors();
 echo $errors['email'];
 ```
 
+# Old input
+When updating an element with a form, you may want to show the user what he typed after validation occurs, especially if some fields dont pass the checks. You can do this by setting the values of input fields to the values returned by the method getOldInput(). If there is no old input to display, which basically means the user never submitted the form, getOldInput() will return custom default values you can specify by passing them through the method setDefaults().
 
+Example:
+```
+// assuming our validator is instantiated as $validator
+$input = $validator->getOldInput();
+echo '<input type="text" name="username" value="' . $input[username] . '" />';
+```
 # Extensibility
 
