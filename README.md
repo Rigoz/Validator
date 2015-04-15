@@ -21,7 +21,7 @@ When instantiating Validator class, you need to provide an array of arguments, w
 - 'constraints': which is an array where keys are field shorthands (the same as input), and values are constraints separated by a space
 
 You can also provide 2 more elements to the array of arguments:
-- 'uniqueCallbacks': which is an array of callback functions for unique constraint check, with keys as shorthands and values as arrays callables
+- 'uniqueCallbacks': which is an array of callback functions for unique constraint check, with keys as shorthands and values as arrays of callables
 - defaults': which is an array of default input returned when getOldInput has no data, where keys are shorthands and values are field values
 
 
