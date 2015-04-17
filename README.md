@@ -15,7 +15,7 @@ It uses associative arrays to assign $_POST keys to shorthands, which are provid
 It supports the following constraints:
 - required: checks if the field is not empty
 - unique: checks if the field value is not taken through a callback function provided by yourself
-- alpha: checks if the field does not contain digits (0-9)
+- alpha: checks if the field contains only letters (extended alphabet letters like à,ò,è,ù are allowed as well
 - integer: checks if the field is an integer number
 - float: checks if the field is a decimal number
 - email: checks if the field is a valid email address
