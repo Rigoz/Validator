@@ -133,7 +133,7 @@ public static function getErrorMessage($code)
 		case 'E_MISSING_FIELD'	: return 'This field is missing from data request';
 		case 'E_REQUIRED_FIELD'	: return 'This field is required';
 		case 'E_UNIQUE_FIELD'	: return 'This value is already in use';
-		case 'E_ALPHA_FIELD'		: return 'This field cannot contain numbers or symbols';
+		case 'E_ALPHA_FIELD'	: return 'This field cannot contain numbers or symbols';
 		case 'E_INTEGER_FIELD'	: return 'This field can only contain integer numbers';
 		case 'E_FLOAT_FIELD'	: return 'This field can only contain decimal numbers';
 		case 'E_EMAIL_FIELD'	: return 'This is not a valid email address';
