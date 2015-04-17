@@ -143,8 +143,8 @@ public static function getErrorMessage($code)
 This is especially useful for multilanguage support.
 
 # Demo
-http://rigoz.github.io/php-validator/
+http://www.rigo7.com/projects/validator
 
 
 # Requirements
-Validator requires PHP 5.3.0 to support 'Late Static Bindings'
+Validator requires PHP 5.3.0 to support late static binding
