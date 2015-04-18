@@ -143,7 +143,7 @@ public static function getErrorMessage($code)
 This is especially useful for multilanguage support.
 
 # Demo
-http://www.rigo7.com/projects/validator
+You can find a basic example at [this page](http://www.rigo7.com/projects/validator?source=git)
 
 
 # Requirements
